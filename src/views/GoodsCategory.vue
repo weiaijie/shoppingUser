@@ -15,9 +15,7 @@ export default {
   },
   components: {
   	HeadTop,
-    Footer,
-    swiper,
-    swiperSlide
+    Footer
   }
 }
 </script>

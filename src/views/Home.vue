@@ -2,12 +2,12 @@
   <div class="home">
     <HeadTop/>
     <swiper :options="swiperOption">
-      <swiper-slide><img src="static/images/jay.jpg"></swiper-slide>
-      <swiper-slide><img src="static/images/jay.jpg"></swiper-slide>
-      <swiper-slide><img src="static/images/jay.jpg"></swiper-slide>
-      <swiper-slide><img src="static/images/jay.jpg"></swiper-slide>
-      <swiper-slide><img src="static/images/jay.jpg"></swiper-slide>
-      <swiper-slide><img src="static/images/jay.jpg"></swiper-slide>
+      <swiper-slide><img src="../assets/top_02.png"></swiper-slide>
+      <swiper-slide><img src="../assets/top_02.png"></swiper-slide>
+      <swiper-slide><img src="../assets/top_02.png"></swiper-slide>
+      <swiper-slide><img src="../assets/top_02.png"></swiper-slide>
+      <swiper-slide><img src="../assets/top_02.png"></swiper-slide>
+      <swiper-slide><img src="../assets/top_02.png"></swiper-slide>
     </swiper>
     <Footer/>
   </div>
