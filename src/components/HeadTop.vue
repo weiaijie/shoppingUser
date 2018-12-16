@@ -2,7 +2,8 @@
   <div class="headTop">
     <router-link to="/"><img src="../assets/top_01.png" alt="上海欧莱美菜单"></router-link>
     <router-link to="/"><img src="../assets/top_02.png" alt="上海欧莱美首页"></router-link>
-    <a href="tel:133" tel=""><img src="../assets/top_03.png" alt="上海欧莱美电话"></a>
+    <a href="tel:133"><img src="../assets/top_03.png" alt="上海欧莱美电话"></a>
+    <div style="clear:both;"></div>
   </div>
 </template>
 
@@ -19,14 +20,15 @@ export default {
 <style scoped>
 .headTop a{
   float: left;
+  display: inline-flex
 }
 .headTop a:nth-child(1){
-  width: 12.3%;
+  width: 15%;
 }
 .headTop a:nth-child(2){
-  width: 75.1%;
+  width: 70%;
 }
 .headTop a:nth-child(3){
-  width: 12.2%;
+  width: 15%;
 }
 </style>
