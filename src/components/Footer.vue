@@ -1,12 +1,12 @@
 <template>
-  <div class="footer">
+  <div class="Footer">
     底部待定
   </div>
 </template>
 
 <script>
 export default {
-  name: 'footer',
+  name: 'Footer',
   props: {
     
   }
