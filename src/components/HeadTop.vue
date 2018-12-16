@@ -20,7 +20,7 @@ export default {
 <style scoped>
 .headTop a{
   float: left;
-  display: inline-flex
+  display: grid
 }
 .headTop a:nth-child(1){
   width: 15%;
