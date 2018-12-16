@@ -16,12 +16,10 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
-  margin: auto;
-  max-width: 640px;
+  /*margin-top: 60px;*/
 }
 img{
   width: 100%;
 }
-html,body{margin:0;padding:0;border: 0;}
+html,body,ul{margin:0;padding:0;border: 0;max-width: 640px;margin: auto;}
 </style>
