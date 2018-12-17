@@ -1,14 +1,13 @@
 <template>
   <div id="app">
     <div id="nav">
-      <!-- <router-link to="/">Home</router-link> | -->
-      <!-- <router-link to="/goodsPage/1">goodsPage</router-link>| -->
-      <!-- <router-link to="/goodsList">goodsList</router-link> -->
+      <!-- <router-link to="/">Home</router-link> |
+      <router-link to="/goodsPage/1">goodsPage</router-link>|
+      <router-link to="/goodsList">goodsList</router-link> -->
     </div>
     <router-view/>
   </div>
 </template>
-
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;

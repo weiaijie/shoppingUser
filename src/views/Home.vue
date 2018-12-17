@@ -59,7 +59,9 @@
     	</div>
     </div>
    
-    <div class="fq"><img src="../assets/zxfq.jpg" alt=""></div>
+    <div class="fq">
+    	<a href="javascript:void(0);"><img src="../assets/zxfq.jpg" alt=""></a>
+    </div>
     <div class="zc">
     	<ul>
     		<li><img src="../assets/zc_01.png" alt=""></li>
@@ -89,6 +91,7 @@ export default {
   name: 'home',
   data(){
     return{
+    	title:'上海欧莱美商城首页',
   	    swiperOption: {//swiper3
   	    autoplay: 3000,
   	    speed: 1000,
@@ -108,8 +111,8 @@ export default {
       return this.$refs.mySwiper.swiper
     }
   },
-
   mounted(){
+  	document.title=this.title;
   	let swiper = this.swiper;
   	$(".home .tabs span").on('click', function(e) {
 		 e.preventDefault()
@@ -117,6 +120,7 @@ export default {
 		 $(this).addClass('active')
 		 swiper.slideTo($(this).index());
 	});
+
   },
   created(){
   },
@@ -142,26 +146,26 @@ img{
 .home .fenlei .fenlei1{
 	overflow: hidden;
 	border-radius: 1.5rem;
-	box-shadow: 0px 0px 16px 0px #ffedcb;
+	box-shadow: 0px 0px 16px 0px #f7d9a2;
 }
 
 .home .fenlei {
-	padding:2%;
+	padding:4% 2%;
 }
 .home .fenlei a{
 	text-decoration: none;
 	color:#434343;
 }
-
 .home .fenlei .tabs span{
+	font-size: 120%;
+	text-align: center;
+	color:#fff;
 	display: block;
 	float: left;
 	width: 25%;
-	text-align: center;
 	margin: 0;
-	color:#fff;
 	background: #ffce70;
-	padding:2% 0;
+	padding:3% 0;
 }
 .home .fenlei .tabs .active{
 	color:#997123;
@@ -180,7 +184,7 @@ img{
 }
 .home .fenlei .swiper-container .swiper-slide li{
 	width: 28%;
-	margin-right: 4%;
+	margin-right: 5%;
 	padding-top:3%;
 }
 .home .fenlei .swiper-container .swiper-slide p{
@@ -200,7 +204,8 @@ img{
 	width: 93.3%;
 }
 
-
+.home .fq{margin: 2% 0 2% 0}
+.home .fq a{display: grid;}
 
 /*.home .hot li:nth-child(1){
 	width: 7.88em;
