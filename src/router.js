@@ -9,15 +9,18 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: Home,
+      meta: {
+        title: '首页'
+      }
     },
     {
       path: '/goodsList',
       name: 'goodsList',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/GoodsCategory.vue')
+      component: () => import( './views/GoodsCategory.vue'),
+      meta: {
+        title: '商品分类'
+      }
     },
     {
       path: '/goodsPage/:id',
@@ -25,7 +28,17 @@ export default new Router({
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/GoodsPage.vue')
+      component: () => import(/* webpackChunkName: "about" */ './views/GoodsPage.vue'),
+      meta: {
+        title: '商品页面'
+      }
+    },
+    { /* Not Found 路由，必须是最后一个路由 */
+      path: '*',
+      component: () => import('./views/404.vue'),
+      meta: {
+        title: '找不到页面'
+      }
     }
   ]
 })
