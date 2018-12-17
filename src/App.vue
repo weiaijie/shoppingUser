@@ -17,8 +17,7 @@
   color: #2c3e50;
   /*margin-top: 60px;*/
 }
-img{
-  width: 100%;
-}
+img{width: 100%;}a{display: block}
+p,h3{margin:0;padding:0;border: 0;}
 html,body,ul{margin:0;padding:0;border: 0;max-width: 640px;margin: auto;}
 </style>
