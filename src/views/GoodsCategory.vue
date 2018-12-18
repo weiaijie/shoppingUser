@@ -3,7 +3,6 @@
   	<HeadTop/>
     <router-link to="/goodsPage/1">goodsPage</router-link>
     <div class="shoplist">
-      <img src="../assets/baokuan.png" alt="爆款推荐" style="margin: 5% 0;">
       <ul>
         <li>
           <router-link to="/">
@@ -60,5 +59,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+li{
+    list-style: none;
+    float: left;
+}
 </style>
