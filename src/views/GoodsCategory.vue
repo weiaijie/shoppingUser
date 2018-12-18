@@ -2,6 +2,44 @@
   <div class="GoodsCategory">
   	<HeadTop/>
     <router-link to="/goodsPage/1">goodsPage</router-link>
+    <div class="shoplist">
+      <img src="../assets/baokuan.png" alt="爆款推荐" style="margin: 5% 0;">
+      <ul>
+        <li>
+          <router-link to="/">
+            <img src="../assets/test.jpg" alt="">
+            <h3>衡力瘦脸针</h3>
+            <p>狂欢价 <span>¥680</span></p>
+            <s>专柜价: ¥1680</s>
+          </router-link>
+        </li>
+        <li>
+          <router-link to="/">
+            <img src="../assets/test.jpg" alt="">
+            <h3>衡力瘦脸针</h3>
+            <p>狂欢价 <span>¥680</span></p>
+            <s>专柜价: ¥1680</s>
+          </router-link>
+        </li>
+        <li>
+          <router-link to="/">
+            <img src="../assets/test.jpg" alt="">
+            <h3>衡力瘦脸针</h3>
+            <p>狂欢价 <span>¥680</span></p>
+            <s>专柜价: ¥1680</s>
+          </router-link>
+        </li>
+        <li>
+          <router-link to="/">
+            <img src="../assets/test.jpg" alt="">
+            <h3>衡力瘦脸针</h3>
+            <p>狂欢价 <span>¥680</span></p>
+            <s>专柜价: ¥1680</s>
+          </router-link>
+        </li>
+        <div style="clear:both;"></div>
+      </ul>
+    </div>
     <Footer/>
   </div>
 </template>
