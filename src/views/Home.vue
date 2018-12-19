@@ -172,7 +172,6 @@ export default {
 
 <style scoped>
 li{
-    list-style: none;
     float: left;
 }
 .home .fenlei .fenlei1{

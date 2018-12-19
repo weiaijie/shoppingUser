@@ -19,8 +19,8 @@
 }
 img{width: 100%;}a{display: block}
 p,h3{margin:0;padding:0;border: 0;}
-html,body,ul{margin:0;padding:0;border: 0;max-width: 640px;margin: auto;}
-
+html,body,ul,hr{margin:0;padding:0;border: 0;max-width: 640px;margin: auto;}
+li{list-style: none;}
 #app .fq{margin: 2% 0 4% 0}
 #app .fq a{display: grid;}
 #app .zc ul{background: #fffee4;padding:2% 1%}
