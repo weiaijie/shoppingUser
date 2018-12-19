@@ -15,44 +15,44 @@
     	<swiper :options="swiperOption" ref="mySwiper" >
     	  <swiper-slide>
     	  	<ul class="hot">
-    	  		<li><router-link to="/goodsList"><img src="../assets/icon/icon_01.png" alt="双眼皮"><p>双眼皮</p></router-link></li>
-    	  		<li><router-link to="/goodsList"><img src="../assets/icon/icon_02.png" alt="假体隆鼻"><p>假体隆鼻</p></router-link></li>
-    	  		<li><router-link to="/goodsList"><img src="../assets/icon/icon_03.png" alt="美白嫩肤"><p>美白嫩肤</p></router-link></li>
-    	  		<li><router-link to="/goodsList"><img src="../assets/icon/icon_04.png" alt="净肤祛斑"><p>净肤祛斑</p></router-link></li>
-    	  		<li><router-link to="/goodsList"><img src="../assets/icon/icon_05.png" alt="自体脂肪"><p>自体脂肪</p></router-link></li>
-    	  		<li><router-link to="/goodsList"><img src="../assets/icon/icon_06.png" alt="吸脂瘦身"><p>吸脂瘦身</p></router-link></li>
-    	  		<li><router-link to="/goodsList"><img src="../assets/icon/icon_07.png" alt="瘦脸针"><p>瘦脸针</p></router-link></li>
-    	  		<li><router-link to="/goodsList"><img src="../assets/icon/icon_08.png" alt="玻尿酸"><p>玻尿酸</p></router-link></li>
+    	  		<li><router-link to="/ip_cat"><img src="../assets/icon/icon_01.png" alt="双眼皮"><p>双眼皮</p></router-link></li>
+    	  		<li><router-link to="/ip_cat"><img src="../assets/icon/icon_02.png" alt="假体隆鼻"><p>假体隆鼻</p></router-link></li>
+    	  		<li><router-link to="/ip_cat"><img src="../assets/icon/icon_03.png" alt="美白嫩肤"><p>美白嫩肤</p></router-link></li>
+    	  		<li><router-link to="/ip_cat"><img src="../assets/icon/icon_04.png" alt="净肤祛斑"><p>净肤祛斑</p></router-link></li>
+    	  		<li><router-link to="/ip_cat"><img src="../assets/icon/icon_05.png" alt="自体脂肪"><p>自体脂肪</p></router-link></li>
+    	  		<li><router-link to="/ip_cat"><img src="../assets/icon/icon_06.png" alt="吸脂瘦身"><p>吸脂瘦身</p></router-link></li>
+    	  		<li><router-link to="/ip_cat"><img src="../assets/icon/icon_07.png" alt="瘦脸针"><p>瘦脸针</p></router-link></li>
+    	  		<li><router-link to="/ip_cat"><img src="../assets/icon/icon_08.png" alt="玻尿酸"><p>玻尿酸</p></router-link></li>
     	  	</ul>
     	  </swiper-slide>
     	  <swiper-slide>
     	  	<ul>
-    	  		<li><router-link to="/goodsList"><img src="../assets/icon/icon_09.png" alt="眼部"><p>眼部</p></router-link></li>
-    	  		<li><router-link to="/goodsList"><img src="../assets/icon/icon_10.png" alt="鼻部"><p>鼻部</p></router-link></li>
-    	  		<li><router-link to="/goodsList"><img src="../assets/icon/icon_11.png" alt="胸部"><p>胸部</p></router-link></li>
-    	  		<li><router-link to="/goodsList"><img src="../assets/icon/icon_12.png" alt="线雕"><p>线雕</p></router-link></li>
-    	  		<li><router-link to="/goodsList"><img src="../assets/icon/icon_13.png" alt="吸脂瘦身"><p>吸脂瘦身</p></router-link></li>
-    	  		<li><router-link to="/goodsList"><img src="../assets/icon/icon_14.png" alt="自体脂肪"><p>自体脂肪</p></router-link></li>
+    	  		<li><router-link to="/ip_cat"><img src="../assets/icon/icon_09.png" alt="眼部"><p>眼部</p></router-link></li>
+    	  		<li><router-link to="/ip_cat"><img src="../assets/icon/icon_10.png" alt="鼻部"><p>鼻部</p></router-link></li>
+    	  		<li><router-link to="/ip_cat"><img src="../assets/icon/icon_11.png" alt="胸部"><p>胸部</p></router-link></li>
+    	  		<li><router-link to="/ip_cat"><img src="../assets/icon/icon_12.png" alt="线雕"><p>线雕</p></router-link></li>
+    	  		<li><router-link to="/ip_cat"><img src="../assets/icon/icon_13.png" alt="吸脂瘦身"><p>吸脂瘦身</p></router-link></li>
+    	  		<li><router-link to="/ip_cat"><img src="../assets/icon/icon_14.png" alt="自体脂肪"><p>自体脂肪</p></router-link></li>
     	  	</ul>
     	  </swiper-slide>
     	  <swiper-slide>
     	  	<ul>
-    	  		<li><router-link to="/goodsList"><img src="../assets/icon/icon_15.png" alt="纹绣"><p>纹绣</p></router-link></li>
-    	  		<li><router-link to="/goodsList"><img src="../assets/icon/icon_16.png" alt="净肤祛斑"><p>净肤祛斑</p></router-link></li>
-    	  		<li><router-link to="/goodsList"><img src="../assets/icon/icon_17.png" alt="紧肤"><p>紧肤</p></router-link></li>
-    	  		<li><router-link to="/goodsList"><img src="../assets/icon/icon_18.png" alt="脱毛"><p>脱毛</p></router-link></li>
-    	  		<li><router-link to="/goodsList"><img src="../assets/icon/icon_19.png" alt="祛痘"><p>祛痘</p></router-link></li>
-    	  		<li><router-link to="/goodsList"><img src="../assets/icon/icon_20.png" alt="美白嫩肤"><p>美白嫩肤</p></router-link></li>
+    	  		<li><router-link to="/ip_cat"><img src="../assets/icon/icon_15.png" alt="纹绣"><p>纹绣</p></router-link></li>
+    	  		<li><router-link to="/ip_cat"><img src="../assets/icon/icon_16.png" alt="净肤祛斑"><p>净肤祛斑</p></router-link></li>
+    	  		<li><router-link to="/ip_cat"><img src="../assets/icon/icon_17.png" alt="紧肤"><p>紧肤</p></router-link></li>
+    	  		<li><router-link to="/ip_cat"><img src="../assets/icon/icon_18.png" alt="脱毛"><p>脱毛</p></router-link></li>
+    	  		<li><router-link to="/ip_cat"><img src="../assets/icon/icon_19.png" alt="祛痘"><p>祛痘</p></router-link></li>
+    	  		<li><router-link to="/ip_cat"><img src="../assets/icon/icon_20.png" alt="美白嫩肤"><p>美白嫩肤</p></router-link></li>
     	  	</ul>
     	  </swiper-slide>
     	  <swiper-slide>
     	    <ul>
-    	  		<li><router-link to="/goodsList"><img src="../assets/icon/icon_21.png" alt="瘦脸针"><p>瘦脸针</p></router-link></li>
-    	  		<li><router-link to="/goodsList"><img src="../assets/icon/icon_22.png" alt="玻尿酸"><p>玻尿酸</p></router-link></li>
-    	  		<li><router-link to="/goodsList"><img src="../assets/icon/icon_23.png" alt="注射除皱"><p>注射除皱</p></router-link></li>
-    	  		<li><router-link to="/goodsList"><img src="../assets/icon/icon_24.png" alt="注射隆鼻"><p>注射隆鼻</p></router-link></li>
-    	  		<li><router-link to="/goodsList"><img src="../assets/icon/icon_25.png" alt="丰下巴"><p>丰下巴</p></router-link></li>
-    	  		<li><router-link to="/goodsList"><img src="../assets/icon/icon_26.png" alt="瘦腿针"><p>瘦腿针</p></router-link></li>
+    	  		<li><router-link to="/ip_cat"><img src="../assets/icon/icon_21.png" alt="瘦脸针"><p>瘦脸针</p></router-link></li>
+    	  		<li><router-link to="/ip_cat"><img src="../assets/icon/icon_22.png" alt="玻尿酸"><p>玻尿酸</p></router-link></li>
+    	  		<li><router-link to="/ip_cat"><img src="../assets/icon/icon_23.png" alt="注射除皱"><p>注射除皱</p></router-link></li>
+    	  		<li><router-link to="/ip_cat"><img src="../assets/icon/icon_24.png" alt="注射隆鼻"><p>注射隆鼻</p></router-link></li>
+    	  		<li><router-link to="/ip_cat"><img src="../assets/icon/icon_25.png" alt="丰下巴"><p>丰下巴</p></router-link></li>
+    	  		<li><router-link to="/ip_cat"><img src="../assets/icon/icon_26.png" alt="瘦腿针"><p>瘦腿针</p></router-link></li>
     	  	</ul>
     	  </swiper-slide>
     	</swiper>
@@ -75,7 +75,7 @@
     	<img src="../assets/baokuan.png" alt="爆款推荐" style="margin: 5% 0;">
     	<ul>
     		<li>
-    			<router-link to="/">
+    			<router-link to="detail/1">
     				<img src="../assets/test.jpg" alt="">
     				<h3>衡力瘦脸针</h3>
     				<p>狂欢价 <span>¥680</span></p>
@@ -83,7 +83,7 @@
     			</router-link>
     		</li>
     		<li>
-    			<router-link to="/">
+    			<router-link to="detail/1">
     				<img src="../assets/test.jpg" alt="">
     				<h3>衡力瘦脸针</h3>
     				<p>狂欢价 <span>¥680</span></p>
@@ -91,7 +91,7 @@
     			</router-link>
     		</li>
     		<li>
-    			<router-link to="/">
+    			<router-link to="detail/1">
     				<img src="../assets/test.jpg" alt="">
     				<h3>衡力瘦脸针</h3>
     				<p>狂欢价 <span>¥680</span></p>
@@ -99,7 +99,7 @@
     			</router-link>
     		</li>
     		<li>
-    			<router-link to="/">
+    			<router-link to="detail/1">
     				<img src="../assets/test.jpg" alt="">
     				<h3>衡力瘦脸针</h3>
     				<p>狂欢价 <span>¥680</span></p>
@@ -233,38 +233,6 @@ li{
 .home .swiper-container .swiper-slide .hot li img{
 	width: 93.3%;
 }
-
-/*.home .fq{margin: 2% 0 4% 0}
-.home .fq a{display: grid;}
-.home .zc ul{background: #fffee4;padding:2% 1%}
-.home .zc li ,.home .zc li a{display: grid;}
-.home .zc li{
-	width: 48%;
-	margin: 1%;
-}
-.home .shopHot ul{background: #fffee4;padding:2%}
-.home .shopHot li{
-	width: 49%;
-	
-	background: #fff;
-	margin-bottom: 2%;
-}
-.home .shopHot li:nth-child(odd) {
-	margin-right: 2%;
-}
-.home .shopHot ul li a img{
-	margin:0;
-	display: block;
-}
-.home .shopHot ul li a {
-	padding:3%;
-	color:#3b3b3b;
-	text-align: left;
-	text-decoration: none;
-}
-.home .shopHot ul li a h3{margin: 1rem 0}
-.home .shopHot ul li a p{margin:0 0 0.4rem}
-.home .shopHot ul li a p span{font-size: 2rem;color:red}*/
 /*.home .hot li:nth-child(1){
 	width: 7.88em;
 	height: 7.88em;

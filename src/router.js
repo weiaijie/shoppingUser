@@ -15,16 +15,16 @@ export default new Router({
       }
     },
     {
-      path: '/goodsList',
-      name: 'goodsList',
+      path: '/ip_cat',
+      name: 'ip_cat',
       component: () => import( './views/GoodsCategory.vue'),
       meta: {
         title: '商品分类'
       }
     },
     {
-      path: '/goodsPage/:id',
-      name: 'goodsPage',
+      path: '/detail/:id',
+      name: 'detail',
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.

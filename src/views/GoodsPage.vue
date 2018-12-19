@@ -1,7 +1,7 @@
 <template>
   <div class="GoodsPage">
 	<HeadTop/>
-    <router-link to="/goodsList">goodsList</router-link>
+    <router-link to="/ip_cat">ip_cat</router-link>
     <Footer/>
   </div>
 </template>
