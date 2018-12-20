@@ -16,7 +16,12 @@ export default {
   components: {
   	HeadTop,
     Footer
-  }
+  },
+  watch: {
+    '$route' (to, from) {
+      console.log(to);
+    }
+  },
 }
 </script>
 

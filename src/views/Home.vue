@@ -80,7 +80,8 @@
     				<h3>衡力瘦脸针</h3>
     				<p>狂欢价 <span>¥680</span></p>
     				<s>专柜价: ¥1680</s>
-    			</router-link>
+            	</router-link>
+            	<a href="javascript:void(0);"><img src="../assets/swt_01.png" alt="聊天"></a>
     		</li>
     		<li>
     			<router-link to="detail/1">
@@ -89,6 +90,7 @@
     				<p>狂欢价 <span>¥680</span></p>
     				<s>专柜价: ¥1680</s>
     			</router-link>
+            	<a href="javascript:void(0);"><img src="../assets/swt_01.png" alt="聊天"></a>
     		</li>
     		<li>
     			<router-link to="detail/1">
@@ -97,6 +99,7 @@
     				<p>狂欢价 <span>¥680</span></p>
     				<s>专柜价: ¥1680</s>
     			</router-link>
+            	<a href="javascript:void(0);"><img src="../assets/swt_01.png" alt="聊天"></a>
     		</li>
     		<li>
     			<router-link to="detail/1">
@@ -105,6 +108,7 @@
     				<p>狂欢价 <span>¥680</span></p>
     				<s>专柜价: ¥1680</s>
     			</router-link>
+            	<a href="javascript:void(0);"><img src="../assets/swt_01.png" alt="聊天"></a>
     		</li>
     		<div style="clear:both;"></div>
     	</ul>

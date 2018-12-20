@@ -34,7 +34,7 @@ li{list-style: none;}
 #app .shoplist ul{background: #fffee4;padding:2%}
 #app .shoplist li{
   width: 49%;
-  
+  position: relative;
   background: #fff;
   margin-bottom: 2%;
 }
@@ -54,4 +54,16 @@ li{list-style: none;}
 #app .shoplist ul li a h3{margin: 1rem 0}
 #app .shoplist ul li a p{margin:0 0 0.4rem}
 #app .shoplist ul li a p span{font-size: 2rem;color:red}
+/*#app .shoplist li a a img:nth-last-child(1){
+  width: 30.7%;
+  position: absolute;
+  right: 7%;
+  bottom: 7%;
+}*/
+#app .shoplist li a:nth-child(2){
+  width: 30.7%;
+  position: absolute;
+  right: 7%;
+  bottom: 7%;
+}
 </style>

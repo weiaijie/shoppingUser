@@ -23,6 +23,14 @@ export default new Router({
       }
     },
     {
+      path: '/ip_cat/:id',
+      name: 'ip_cat1',
+      component: () => import( './views/GoodsCategory.vue'),
+      meta: {
+        title: '商品分类'
+      }
+    },
+    {
       path: '/detail/:id',
       name: 'detail',
       // route level code-splitting

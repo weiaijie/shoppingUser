@@ -12,18 +12,15 @@
         	    :value="item.value">
         	  </el-option>
         	</el-select> -->
-    		<el-dropdown @command="handleCommand">
+
+    		<el-dropdown @command="handleCommand"  trigger="click">
 			  <span class="el-dropdown-link">
-			    选择项目<i class="el-icon-arrow-down el-icon--right"></i>
+			    {{ fenlei }}<i class="el-icon-arrow-down el-icon--right"></i>
 			  </span>
 			  <el-dropdown-menu slot="dropdown" >
-			  	<el-dropdown-item 
-			  	v-for="item in options"
-			  	:command="item.value">{{item.label}}
-			  	</el-dropdown-item>
-			    <!-- <el-dropdown-item command="a">黄金糕</el-dropdown-item> -->
+			  	<el-dropdown-item v-for="item in options" :label="item.label" :command="item.value">{{item.label}}</el-dropdown-item>
 			  </el-dropdown-menu>
-			</el-dropdown>
+			</el-dropdown> 
     	</li>
     	<li style="color:#666666;">智能排序 ></li>
     	<li style="color: #ff5571;">在线咨询 ></li>
@@ -38,6 +35,7 @@
             <p>狂欢价 <span>¥680</span></p>
             <s>专柜价: ¥1680</s>
           </router-link>
+          <a href="javascript:void(0);"><img src="../assets/swt_01.png" alt="聊天"></a>
         </li>
         <li>
           <router-link to="/detail/1">
@@ -46,6 +44,7 @@
             <p>狂欢价 <span>¥680</span></p>
             <s>专柜价: ¥1680</s>
           </router-link>
+          <a href="javascript:void(0);"><img src="../assets/swt_01.png" alt="聊天"></a>
         </li>
         <li>
           <router-link to="/detail/1">
@@ -54,6 +53,7 @@
             <p>狂欢价 <span>¥680</span></p>
             <s>专柜价: ¥1680</s>
           </router-link>
+          <a href="javascript:void(0);"><img src="../assets/swt_01.png" alt="聊天"></a>
         </li>
         <li>
           <router-link to="/detail/1">
@@ -62,6 +62,7 @@
             <p>狂欢价 <span>¥680</span></p>
             <s>专柜价: ¥1680</s>
           </router-link>
+          <a href="javascript:void(0);"><img src="../assets/swt_01.png" alt="聊天"></a>
         </li>
         <div style="clear:both;"></div>
       </ul>
@@ -79,55 +80,73 @@ export default {
   },
   data(){
   	return{
-  		options: [],   //类别下拉
-      	value1: '',
+  		fenlei: '选择项目',
+		options: [
+			{'value':'1','label':'眼部'},
+			{'value':'2','label':'鼻部'},
+			{'value':'3','label':'胸部'},
+			{'value':'4','label':'吸脂瘦身'},
+			{'value':'6','label':'自体脂肪'},
+			{'value':'7','label':'瘦脸针'},
+			{'value':'8','label':'玻尿酸'},
+			{'value':'14','label':'净肤祛斑'},
+			{'value':'18','label':'美白嫩肤'},
+		],
   	}
   },
   components: {
   	HeadTop,
     Footer
   },
-  created(){
-  	this.initData3();
+  watch: {
+    '$route' (to, from) {
+      console.log(to);
+    }
   },
-  mounted() {
-  },
+  // created(){
+  // 	this.initData3();
+  // },
+  // mounted() {
+  // },
   methods: {
-  	handleCommand(command) {
+  	handleCommand(command,label) {
       this.$message('click on item ' + command);
+       console.log(label.$attrs.label);
+       this.fenlei = label.$attrs.label;
     },
-    async initData3(){
-      this.axios.post('?category')
-      .then((response)=> {
-        // console.log(response.data);
-        if (response.status==200) {
-          //获取到分类数据
-          this.options = response.data;
-          }else{
-          this.$notify.error({
-            title: '错误',
-            message: '数据获取失败',
-            offset: 100
-          });
-          return false;
-        }
-      })
-      .catch((error)=> {
-        console.log(error);
-        this.$notify.error({
-          title: '错误',
-          message: '数据获取失败',
-          offset: 100
-        });
-        return false;
-      });
-    },
-    handleChange(value) {
-       console.log(value);
-    },
-    handleSelect(item) {
-      console.log(item);
-    },
+    // async initData3(){
+    //   this.axios.post('?category')
+    //   .then((response)=> {
+    //     // console.log(response.data);
+    //     if (response.status==200) {
+    //       //获取到分类数据
+    //       // console.log(response);
+    //       this.options = response.data;
+    //       }else{
+    //       this.$notify.error({
+    //         title: '错误',
+    //         message: '数据获取失败',
+    //         offset: 100
+    //       });
+    //       return false;
+    //     }
+    //   })
+    //   .catch((error)=> {
+    //     console.log(error);
+    //     this.$notify.error({
+    //       title: '错误',
+    //       message: '数据获取失败',
+    //       offset: 100
+    //     });
+    //     return false;
+    //   });
+    // },
+    // handleChange(value) {
+    //    console.log(value);
+    // },
+    // handleSelect(item) {
+    //   console.log(item);
+    // },
   }
 }
 </script>
@@ -166,5 +185,4 @@ export default {
 .shoplist li{
     float: left;
 }
-
 </style>
