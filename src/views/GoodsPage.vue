@@ -7,7 +7,10 @@
 		<div class="pay">
 			<span>¥680<s>原价: ¥1680</s></span>
 			<p>已预约：3991</p>
+			<br>
+			<a href="javascript:void(0);">立即购买</a>
 		</div>
+
 		<div class="tip1">
 			<img src="../assets/tip_01.png" alt="" class="tip_0">
 			<ul>
@@ -75,6 +78,19 @@ export default {
 	width: 27%;
 	font-size:1.3rem;
 	text-align: right;
+}
+.goods .pay a{
+	clear:both;
+	display: block;
+	margin: auto;
+	margin-top:7%;
+	width: 90%;
+	background: #ff6600;
+	border-radius: 0.5rem;
+	color:#fff;
+	text-decoration:none;
+	padding:1% 0;
+	font-size:1.3rem;
 }
 .goods .tip_0{
 	margin: 1.5rem 0;
