@@ -38,6 +38,14 @@ import HeadTop from '@/components/HeadTop.vue'
 import Footer from '@/components/Footer.vue'
 export default {
   name: 'GoodsPage',
+  data() {
+  	return {
+  		title:'商品页',
+  	}
+  },
+  mounted() {
+  	document.title=this.title;
+  },
   props: {
   },
   components: {

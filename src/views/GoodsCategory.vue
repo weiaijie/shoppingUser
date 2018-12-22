@@ -80,6 +80,7 @@ export default {
   },
   data(){
   	return{
+  		title:'商品分类',
   		fenlei: '选择项目',
 		options: [
 			{'value':'1','label':'眼部'},
@@ -93,6 +94,9 @@ export default {
 			{'value':'18','label':'美白嫩肤'},
 		],
   	}
+  },
+  mounted() {
+  	document.title=this.title;
   },
   components: {
   	HeadTop,
