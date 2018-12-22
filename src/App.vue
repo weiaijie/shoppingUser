@@ -61,9 +61,12 @@ li{list-style: none;}
   bottom: 7%;
 }*/
 #app .shoplist li a:nth-child(2){
-  width: 30.7%;
+  /*width: 30.7%;*/
+  width: 23.7%;
   position: absolute;
-  right: 7%;
+  /*right: 7%;*/
+  right: 1%;
   bottom: 7%;
 }
+
 </style>

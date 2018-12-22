@@ -28,39 +28,13 @@
     </div>
     <div class="shoplist">
       <ul>
-        <li>
-          <router-link to="/detail/1">
-            <img src="http://192.168.0.117/src/images/20181204/729b2caf6c398feb814728f01ca95016.jpg" alt="">
-            <h3>衡力瘦脸针</h3>
-            <p>狂欢价 <span>¥680</span></p>
-            <s>专柜价: ¥1680</s>
-          </router-link>
-          <a href="javascript:void(0);"><img src="../assets/swt_01.png" alt="聊天"></a>
-        </li>
-        <li>
-          <router-link to="/detail/1">
-            <img src="http://192.168.0.117/src/images/20181204/49f312163eab4821a265fe1d0dfa965a.jpg" alt="">
-            <h3>衡力瘦脸针</h3>
-            <p>狂欢价 <span>¥680</span></p>
-            <s>专柜价: ¥1680</s>
-          </router-link>
-          <a href="javascript:void(0);"><img src="../assets/swt_01.png" alt="聊天"></a>
-        </li>
-        <li>
-          <router-link to="/detail/1">
-            <img src="http://192.168.0.117/src/images/20181204/45fdb9a409611c11e220be40c3466698.jpg" alt="">
-            <h3>衡力瘦脸针</h3>
-            <p>狂欢价 <span>¥680</span></p>
-            <s>专柜价: ¥1680</s>
-          </router-link>
-          <a href="javascript:void(0);"><img src="../assets/swt_01.png" alt="聊天"></a>
-        </li>
-        <li>
-          <router-link to="/detail/1">
-            <img src="http://192.168.0.117/src/images/20181204/765668472498aa773e1b756afcbff451.jpg" alt="">
-            <h3>衡力瘦脸针</h3>
-            <p>狂欢价 <span>¥680</span></p>
-            <s>专柜价: ¥1680</s>
+        <li v-for="item in shops" >
+          <router-link :to="'/detail/' + item.id">
+            <img :src="'http://192.168.0.117' +item.logo" :alt="item.name">
+            <h3>{{ item.name }}</h3>
+            <p>狂欢价 <span>¥{{ item.ymoney }}</span></p>
+<!-- {item.state} -->
+            <s>专柜价: ¥{{ item.money }}</s>
           </router-link>
           <a href="javascript:void(0);"><img src="../assets/swt_01.png" alt="聊天"></a>
         </li>
@@ -82,6 +56,7 @@ export default {
   	return{
   		title:'商品分类',
   		fenlei: '选择项目',
+  		shops: [],
 		options: [
 			{'value':'1','label':'眼部'},
 			{'value':'2','label':'鼻部'},
@@ -104,53 +79,59 @@ export default {
   },
   watch: {
     '$route' (to, from) {
-      console.log(to);
+      // this.$route.params.id = to;
+      // this.$router.push('/ip_cat/'+ to); 
+      // console.log(to);
+      this.initData();
     }
   },
-  // created(){
-  // 	this.initData3();
-  // },
+  created(){
+  	this.initData();
+  },
   // mounted() {
   // },
   methods: {
   	handleCommand(command,label) {
-      this.$message('click on item ' + command);
-       console.log(label.$attrs.label);
+       // this.$message('click on item ' + command);
+       // console.log(label.$attrs.label);
        this.fenlei = label.$attrs.label;
+       this.$router.push('/ip_cat/'+ command);
+       this.$message('切换成功');
+       // this.initData();
     },
-    // async initData3(){
-    //   this.axios.post('?category')
-    //   .then((response)=> {
-    //     // console.log(response.data);
-    //     if (response.status==200) {
-    //       //获取到分类数据
-    //       // console.log(response);
-    //       this.options = response.data;
-    //       }else{
-    //       this.$notify.error({
-    //         title: '错误',
-    //         message: '数据获取失败',
-    //         offset: 100
-    //       });
-    //       return false;
-    //     }
-    //   })
-    //   .catch((error)=> {
-    //     console.log(error);
-    //     this.$notify.error({
-    //       title: '错误',
-    //       message: '数据获取失败',
-    //       offset: 100
-    //     });
-    //     return false;
-    //   });
-    // },
-    // handleChange(value) {
-    //    console.log(value);
-    // },
-    // handleSelect(item) {
-    //   console.log(item);
-    // },
+    async initData(){
+      this.axios.post('?ip_cat&cid=' + this.$route.params.id + '&limit=4')
+      .then((response)=> {
+        // console.log(response.data);	
+        if (response.status==200) {
+          //获取到分类数据
+          // console.log(response);
+          this.shops = response.data;
+          }else{
+          this.$notify.error({
+            title: '错误',
+            message: '数据获取失败',
+            offset: 100
+          });
+          return false;
+        }
+      })
+      .catch((error)=> {
+        console.log(error);
+        this.$notify.error({
+          title: '错误',
+          message: '数据获取失败',
+          offset: 100
+        });
+        return false;
+      });
+    },
+    handleChange(value) {
+       console.log(value);
+    },
+    handleSelect(item) {
+      console.log(item);
+    },
   }
 }
 </script>

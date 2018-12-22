@@ -2,11 +2,11 @@
   <div class="GoodsPage">
 	<HeadTop/>
 	<div class="goods">
-		<img src="http://192.168.0.117/src/images/20181204/729b2caf6c398feb814728f01ca95016.jpg" alt="">
-		<p>【玻尿酸去黑眼圈】【铂金瑞蓝玻尿酸1ml】风靡中国，变美不留痕迹(支持现场验真伪，限购1支)</p>
+		<img :src="'http://192.168.0.117' + shop.logo " alt="">
+		<p>【{{ shop.name }}】【{{ shop.describe }}】</p>
 		<div class="pay">
-			<span>¥680<s>原价: ¥1680</s></span>
-			<p>已预约：3991</p>
+			<span>¥{{ shop.money }}<s>原价: ¥{{ shop.money }}</s></span>
+			<p>已预约：{{ shop.sellmun }}</p>
 			<br>
 			<a href="javascript:void(0);">立即购买</a>
 		</div>
@@ -15,7 +15,7 @@
 			<img src="../assets/tip_01.png" alt="" class="tip_0">
 			<ul>
 				<li>项目</li>
-				<li><span>•</span>玻尿酸</li>
+				<li><span>•</span>{{ shop.cidname }}</li>
 				<li>时间</li>
 				<li><span>•</span>支付后30天内到院</li>
 				<li>提示</li>
@@ -41,6 +41,7 @@ export default {
   data() {
   	return {
   		title:'商品页',
+  		shop:[],
   	}
   },
   mounted() {
@@ -52,11 +53,38 @@ export default {
   	HeadTop,
     Footer
   },
-  watch: {
-    '$route' (to, from) {
-      console.log(to);
-    }
+  created(){
+  	this.initData();
   },
+  methods: {
+    async initData(){
+      this.axios.post('?detail&proId=' + this.$route.params.id)
+      .then((response)=> {
+        console.log(response.data[0]);	
+        if (response.status==200) {
+          //获取到分类数据
+          // console.log(response);
+          this.shop = response.data[0];
+          }else{
+          this.$notify.error({
+            title: '错误',
+            message: '数据获取失败',
+            offset: 100
+          });
+          return false;
+        }
+      })
+      .catch((error)=> {
+        console.log(error);
+        this.$notify.error({
+          title: '错误',
+          message: '数据获取失败',
+          offset: 100
+        });
+        return false;
+      });
+    },
+  }
 }
 </script>
 
