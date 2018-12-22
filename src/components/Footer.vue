@@ -48,7 +48,7 @@ export default {
 
 }
 .footer ul{
-	padding:3% 0;
+	padding:1rem 0;
 	background: #4e4e4e;
     width: 100%;
     max-width: 640px;
