@@ -1,8 +1,17 @@
 <template>
   <div class="home">
+  	<!-- <scroller
+      :on-refresh="refresh"
+      :on-infinite="infinite"
+      distance="5%"
+      refresh-layer-color="#4b8bf4"
+      loading-layer-color="#ec4949"
+    >
+    <svg class="spinner" style="stroke: #4b8bf4;" slot="refresh-spinner" viewBox="0 0 64 64">
+       <g stroke-width="7" stroke-linecap="round"><line x1="10" x2="10" y1="27.3836" y2="36.4931"><animate attributeName="y1" dur="750ms" values="16;18;28;18;16;16" repeatCount="indefinite"></animate><animate attributeName="y2" dur="750ms" values="48;46;36;44;48;48" repeatCount="indefinite"></animate><animate attributeName="stroke-opacity" dur="750ms" values="1;.4;.5;.8;1;1" repeatCount="indefinite"></animate></line><line x1="24" x2="24" y1="18.6164" y2="45.3836"><animate attributeName="y1" dur="750ms" values="16;16;18;28;18;16" repeatCount="indefinite"></animate><animate attributeName="y2" dur="750ms" values="48;48;46;36;44;48" repeatCount="indefinite"></animate><animate attributeName="stroke-opacity" dur="750ms" values="1;1;.4;.5;.8;1" repeatCount="indefinite"></animate></line><line x1="38" x2="38" y1="16.1233" y2="47.8767"><animate attributeName="y1" dur="750ms" values="18;16;16;18;28;18" repeatCount="indefinite"></animate><animate attributeName="y2" dur="750ms" values="44;48;48;46;36;44" repeatCount="indefinite"></animate><animate attributeName="stroke-opacity" dur="750ms" values=".8;1;1;.4;.5;.8" repeatCount="indefinite"></animate></line><line x1="52" x2="52" y1="16" y2="48"><animate attributeName="y1" dur="750ms" values="28;18;16;16;18;28" repeatCount="indefinite"></animate><animate attributeName="y2" dur="750ms" values="36;44;48;48;46;36" repeatCount="indefinite"></animate><animate attributeName="stroke-opacity" dur="750ms" values=".5;.8;1;1;.4;.5" repeatCount="indefinite"></animate></line></g></svg> -->
+
     <HeadTop/>
     <img src="../assets/banner.jpg" alt="上海欧莱美商城">
-    
     <div class="fenlei">
     	<div class="fenlei1">
     	<div class="tabs">
@@ -74,45 +83,25 @@
     <div class="shoplist">
     	<img src="../assets/baokuan.png" alt="爆款推荐" style="margin: 5% 0;">
     	<ul>
-    		<li>
-    			<router-link to="detail/1">
-    				<img src="../assets/test.jpg" alt="">
-    				<h3>衡力瘦脸针</h3>
-    				<p>狂欢价 <span>¥680</span></p>
-    				<s>专柜价: ¥1680</s>
-            	</router-link>
-            	<a href="javascript:void(0);"><img src="../assets/swt_01.png" alt="聊天"></a>
-    		</li>
-    		<li>
-    			<router-link to="detail/1">
-    				<img src="../assets/test.jpg" alt="">
-    				<h3>衡力瘦脸针</h3>
-    				<p>狂欢价 <span>¥680</span></p>
-    				<s>专柜价: ¥1680</s>
-    			</router-link>
-            	<a href="javascript:void(0);"><img src="../assets/swt_01.png" alt="聊天"></a>
-    		</li>
-    		<li>
-    			<router-link to="detail/1">
-    				<img src="../assets/test.jpg" alt="">
-    				<h3>衡力瘦脸针</h3>
-    				<p>狂欢价 <span>¥680</span></p>
-    				<s>专柜价: ¥1680</s>
-    			</router-link>
-            	<a href="javascript:void(0);"><img src="../assets/swt_01.png" alt="聊天"></a>
-    		</li>
-    		<li>
-    			<router-link to="detail/1">
-    				<img src="../assets/test.jpg" alt="">
-    				<h3>衡力瘦脸针</h3>
-    				<p>狂欢价 <span>¥680</span></p>
-    				<s>专柜价: ¥1680</s>
-    			</router-link>
-            	<a href="javascript:void(0);"><img src="../assets/swt_01.png" alt="聊天"></a>
-    		</li>
+    		<li v-for="item in shops" >
+          <router-link :to="'/detail/' + item.id">
+            <img :src="'http://192.168.0.117' +item.logo" :alt="item.name">
+            <h3>{{ item.name }}</h3>
+            <p>狂欢价 <span>¥{{ item.id }}</span></p>
+            <s>专柜价: ¥{{ item.money }}</s>
+          </router-link>
+          <a href="javascript:void(0);"><img src="../assets/swt_01.png" alt="聊天"></a>
+        </li>
     		<div style="clear:both;"></div>
     	</ul>
     </div>
+
+    <div class="loading" :style="'display:' + display">
+      <svg class="spinner" style="fill: #ec4949;" slot="infinite-spinner" viewBox="0 0 64 64">
+        <g><circle cx="16" cy="32" stroke-width="0" r="3"><animate attributeName="fill-opacity" dur="750ms" values=".5;.6;.8;1;.8;.6;.5;.5" repeatCount="indefinite"></animate><animate attributeName="r" dur="750ms" values="3;3;4;5;6;5;4;3" repeatCount="indefinite"></animate></circle><circle cx="32" cy="32" stroke-width="0" r="3.09351"><animate attributeName="fill-opacity" dur="750ms" values=".5;.5;.6;.8;1;.8;.6;.5" repeatCount="indefinite"></animate><animate attributeName="r" dur="750ms" values="4;3;3;4;5;6;5;4" repeatCount="indefinite"></animate></circle><circle cx="48" cy="32" stroke-width="0" r="4.09351"><animate attributeName="fill-opacity" dur="750ms" values=".6;.5;.5;.6;.8;1;.8;.6" repeatCount="indefinite"></animate><animate attributeName="r" dur="750ms" values="5;4;3;3;4;5;6;5" repeatCount="indefinite"></animate></circle></g></svg>
+    </div>
+    
+    		<!-- </scroller> -->
     <Footer/>
   </div>
 </template>
@@ -131,17 +120,24 @@ export default {
   name: 'home',
   data(){
     return{
-    	title:'上海欧莱美商城首页',
-  	    swiperOption: {//swiper3
-  	    autoplay: 3000,
-  	    speed: 1000,
-  	    on: {
-  	  		slideChangeTransitionStart: function(){
-  	  	 	 // console.log(this.activeIndex);
-  	  	 	 $(".home .tabs .active").removeClass('active');
-      		 $(".home .tabs span").eq(this.activeIndex).addClass('active');
-
-  	  		}
+    	 title:'上海欧莱美商城首页',
+    	 shops:[],
+       persons: [],
+    	 nums: 0,
+       display: 'block',
+    	 pagenum: 1,
+       bottoms: true,
+    	 limit1: 0,
+    	 limit2: 4,
+       allLoaded: false, 
+  	   swiperOption: {//swiper3
+  	   autoplay: 3000,
+  	   speed: 1000,
+  	   on: {
+  	  	slideChangeTransitionStart: function(){
+  	   	 $(".home .tabs .active").removeClass('active');
+      	 $(".home .tabs span").eq(this.activeIndex).addClass('active');
+  	  	  }
   	    }
   	  }
   	}
@@ -153,23 +149,126 @@ export default {
   },
   mounted(){
   	document.title=this.title;
-  	let swiper = this.swiper;
-  	$(".home .tabs span").on('click', function(e) {
-		 e.preventDefault()
-		 $(".home .tabs .active").removeClass('active')
-		 $(this).addClass('active')
-		 swiper.slideTo($(this).index());
-	});
-
+    let swiper = this.swiper;
+    $(".home .tabs span").on('click', function(e) {
+	 	   e.preventDefault()
+	 	   $(".home .tabs .active").removeClass('active')
+	 	   $(this).addClass('active')
+	 	   swiper.slideTo($(this).index());
+	  });
+  this.scroll(this.persons)
   },
   created(){
+  	this.initData()
+  	this.initDatanums()
   },
   components: {
   	HeadTop,
     Footer,
     swiper,
     swiperSlide
-  }
+  },
+  methods: {
+      scroll(person) {
+        let isLoading = false
+        window.onscroll = () => {
+          // 距离底部200px时加载一次
+          let bottomOfWindow = document.documentElement.offsetHeight - document.documentElement.scrollTop - window.innerHeight <= 200
+          if (bottomOfWindow && isLoading == false) {
+            isLoading = true
+           
+           if (this.shops.length >= 10) {
+           // if (this.shops.length >= this.nums) {
+            console.log('没有更多了')
+            return;
+           }else{
+              this.limit1 = this.limit1 + 4;
+                // console.log(this.limit1);
+                this.initData();
+                // this.bottoms = false;
+                console.log(this.pagenum++);
+              // setTimeout(() => {
+                
+              // }, 1500)
+            }
+            isLoading = false
+          }
+        }
+      },
+      refresh(done) {
+        this.limit1 = 0;
+        this.shops = [];
+        this.initData();
+      	done();
+      },
+
+      infinite(done) {
+        // if (this.bottoms == false) {
+        //   console.log(this.bottoms);
+        //   return;
+        // }
+      	if (this.shops.length >= this.nums) {
+      		// console.log(this.shops.length);
+      		setTimeout(() => {
+          	done(true)
+            console.log('jie');
+            return;
+          })
+      	}else{
+      		setTimeout(() => {
+        		this.limit1 = this.limit1 + 20;
+            console.log(this.limit1);
+        		this.initData();
+            // this.bottoms = false;
+        		setTimeout(() => {
+        			console.log(this.pagenum++);
+        	  	  done()
+        	  	})
+        	}, 1500)
+      	}
+      },
+      async initDatanums(){
+      	this.axios.post('?nums')
+      	.then((response)=> {
+      		if (response.status==200) {
+      			this.nums = response.data.nums;
+      		}
+      	});
+      },
+      async initData(){
+	  // this.axios.post('?shophot&proId=' + this.$route.params.id + '&limit1=' + limit1 + '&limit2=' + limit2)
+      this.axios.post('?shophot&limit1=' + this.limit1 + '&limit2=' + this.limit2)
+      .then((response)=> {
+        // console.log(response.data);
+        if (response.status==200) {
+          //获取到分类数据
+          // console.log(response.data.length);
+          for (var i = 0; i < response.data.length; i++) {
+          	// console.log(response.data[i].id)
+          	this.shops.push(response.data[i]);
+          }
+          // this.shops = response.data;
+          return true;
+        }else{
+          this.$notify.error({
+            title: '错误',
+            message: '数据获取失败',
+            offset: 100
+          });
+          return false;
+        }
+      })
+      .catch((error)=> {
+        console.log(error);
+        this.$notify.error({
+          title: '错误',
+          message: '数据获取失败',
+          offset: 100
+        });
+        return false;
+      });
+    },
+   }
   
 }
 </script>
@@ -178,6 +277,12 @@ export default {
 li{
     float: left;
 }
+/*.home {
+  position: relative;
+}
+.home ._v-container {
+  height: auto!important;
+}*/
 .home .fenlei .fenlei1{
 	overflow: hidden;
 	border-radius: 1.5rem;
@@ -236,6 +341,12 @@ li{
 }
 .home .swiper-container .swiper-slide .hot li img{
 	width: 93.3%;
+}
+.home .loading svg{
+  margin: auto;
+  width: 50%;
+  width: 11%;
+  margin-bottom: 5rem;
 }
 /*.home .hot li:nth-child(1){
 	width: 7.88em;

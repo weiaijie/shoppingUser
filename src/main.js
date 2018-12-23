@@ -12,7 +12,6 @@ import './config/rem'
 // import 'swiper/dist/css/swiper.css'
 
 
-
 Vue.use(Vuex)
 Vue.use(ElementUI)
 Vue.use(VueAxios, axios)

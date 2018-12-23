@@ -28,7 +28,7 @@
 		</li>
 		<div style="clear:both;"></div>
     </ul>
-    <hr style="height:6.5rem;">
+    <!-- <hr style="height:6.5rem;"> -->
   </div>
 </template>
 
