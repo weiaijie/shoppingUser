@@ -2,7 +2,7 @@
   <div class="GoodsPage">
 	<HeadTop/>
 	<div class="goods">
-		<img :src="'http://192.168.0.117' + shop.logo " alt="">
+		<img :src="'http://www.weiaijie.top' + shop.logo " alt="">
 		<p>【{{ shop.name }}】【{{ shop.describe }}】</p>
 		<div class="pay">
 			<span>¥{{ shop.money }}<s>原价: ¥{{ shop.money }}</s></span>
@@ -18,8 +18,8 @@
 				<li><span>•</span>{{ shop.cidname }}</li>
 				<li>时间</li>
 				<li><span>•</span>支付后30天内到院</li>
-				<li>提示</li>
-				<li><span>•</span>小仙女们注意啦~ 此商品为热玛吉第四代（黄金治疗头）：全面部活动价38000</li>
+				<!-- <li>提示</li> -->
+				<!-- <li><span>•</span>小仙女们注意啦~ 此商品为热玛吉第四代（黄金治疗头）：全面部活动价38000</li> -->
 			</ul>
 			<img src="../assets/doctor_01.png" alt="医生" class="tip_0" style="margin-bottom:0">
 		</div>

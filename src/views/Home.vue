@@ -85,7 +85,8 @@
     	<ul>
     		<li v-for="item in shops" >
           <router-link :to="'/detail/' + item.id">
-            <img :src="'http://192.168.0.117' +item.logo" :alt="item.name">
+            <img v-lazyload="'http://192.168.0.117' + item.logo" src="../assets/shopback.svg" :alt="item.name">
+            <!-- <img src="../assets/shopback.svg" :alt="item.name"> -->
             <h3>{{ item.name }}</h3>
             <p>狂欢价 <span>¥{{ item.id }}</span></p>
             <s>专柜价: ¥{{ item.money }}</s>
@@ -96,8 +97,9 @@
     	</ul>
     </div>
 
-    <div class="loading" :style="'display:' + display">
-      <svg class="spinner" style="fill: #ec4949;" slot="infinite-spinner" viewBox="0 0 64 64">
+    <div class="loading" >
+      <p  v-if="display === true">我是有底线的</p>
+      <svg v-else class="spinner" style="fill: #ec4949;" slot="infinite-spinner" viewBox="0 0 64 64">
         <g><circle cx="16" cy="32" stroke-width="0" r="3"><animate attributeName="fill-opacity" dur="750ms" values=".5;.6;.8;1;.8;.6;.5;.5" repeatCount="indefinite"></animate><animate attributeName="r" dur="750ms" values="3;3;4;5;6;5;4;3" repeatCount="indefinite"></animate></circle><circle cx="32" cy="32" stroke-width="0" r="3.09351"><animate attributeName="fill-opacity" dur="750ms" values=".5;.5;.6;.8;1;.8;.6;.5" repeatCount="indefinite"></animate><animate attributeName="r" dur="750ms" values="4;3;3;4;5;6;5;4" repeatCount="indefinite"></animate></circle><circle cx="48" cy="32" stroke-width="0" r="4.09351"><animate attributeName="fill-opacity" dur="750ms" values=".6;.5;.5;.6;.8;1;.8;.6" repeatCount="indefinite"></animate><animate attributeName="r" dur="750ms" values="5;4;3;3;4;5;6;5" repeatCount="indefinite"></animate></circle></g></svg>
     </div>
     
@@ -124,7 +126,7 @@ export default {
     	 shops:[],
        persons: [],
     	 nums: 0,
-       display: 'block',
+       display: false,
     	 pagenum: 1,
        bottoms: true,
     	 limit1: 0,
@@ -156,7 +158,7 @@ export default {
 	 	   $(this).addClass('active')
 	 	   swiper.slideTo($(this).index());
 	  });
-  this.scroll(this.persons)
+  this.scroll(this.persons);
   },
   created(){
   	this.initData()
@@ -177,19 +179,15 @@ export default {
           if (bottomOfWindow && isLoading == false) {
             isLoading = true
            
-           if (this.shops.length >= 10) {
-           // if (this.shops.length >= this.nums) {
+           // if (this.shops.length >= 10) {
+           if (this.shops.length >= this.nums) {
             console.log('没有更多了')
+            this.display = true;
             return;
            }else{
               this.limit1 = this.limit1 + 4;
-                // console.log(this.limit1);
                 this.initData();
-                // this.bottoms = false;
-                console.log(this.pagenum++);
-              // setTimeout(() => {
-                
-              // }, 1500)
+               console.log('第' + this.pagenum++ + '页');
             }
             isLoading = false
           }
@@ -342,12 +340,7 @@ li{
 .home .swiper-container .swiper-slide .hot li img{
 	width: 93.3%;
 }
-.home .loading svg{
-  margin: auto;
-  width: 50%;
-  width: 11%;
-  margin-bottom: 5rem;
-}
+
 /*.home .hot li:nth-child(1){
 	width: 7.88em;
 	height: 7.88em;

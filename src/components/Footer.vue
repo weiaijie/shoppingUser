@@ -28,7 +28,7 @@
 		</li>
 		<div style="clear:both;"></div>
     </ul>
-    <!-- <hr style="height:6.5rem;"> -->
+    <hr style="height:6.5rem;">
   </div>
 </template>
 
@@ -48,7 +48,6 @@ export default {
 
 }
 .footer ul{
-	padding:1rem 0;
 	background: #4e4e4e;
     width: 100%;
     max-width: 640px;
@@ -57,14 +56,14 @@ export default {
     z-index: 1;
 }
 .footer ul li:nth-child(1){
-	width: 10.63%;
+	width: 17.63%;
 }
 .footer ul li{
 	float: left;
-	width: 9.22%;
-	margin: 0 3% 0 7%;
+	width: 16.22%;
+	margin: 0 1% 0 2%;
 }
 
-.footer a{text-decoration: none;color:#fff;}
+.footer a{text-decoration: none;color:#fff;padding: 1rem 1rem;}
 
 </style>

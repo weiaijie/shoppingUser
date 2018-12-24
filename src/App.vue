@@ -68,5 +68,9 @@ li{list-style: none;}
   right: 1%;
   bottom: 7%;
 }
-
+.loading svg{
+  margin: auto;
+  width: 50%;
+  width: 11%;
+}
 </style>
