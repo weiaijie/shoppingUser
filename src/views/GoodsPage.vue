@@ -2,7 +2,8 @@
   <div class="GoodsPage">
 	<HeadTop/>
 	<div class="goods">
-		<img :src="'http://www.weiaijie.top' + shop.logo " alt="">
+		<!-- <img :src="'http://www.weiaijie.top' + shop.logo " alt=""> -->
+		<img v-lazyload="'http://192.168.0.117' + shop.logo" src="../assets/shopback.svg" alt="">
 		<p>【{{ shop.name }}】【{{ shop.describe }}】</p>
 		<div class="pay">
 			<span>¥{{ shop.money }}<s>原价: ¥{{ shop.money }}</s></span>
@@ -12,7 +13,9 @@
 		</div>
 
 		<div class="tip1">
+			<!-- <img src="../assets/tip_01.png" alt="" class="tip_0"> -->
 			<img src="../assets/tip_01.png" alt="" class="tip_0">
+			
 			<ul>
 				<li>项目</li>
 				<li><span>•</span>{{ shop.cidname }}</li>
