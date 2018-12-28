@@ -30,7 +30,8 @@
       <ul>
         <li v-for="item in shops" >
           <router-link :to="'/detail/' + item.id">
-            <img v-lazyload="'http://192.168.0.117' + item.logo" src="../assets/shopback.svg" :alt="item.name">
+            <!-- <img v-lazyload="'http://192.168.0.117' + item.logo" src="../assets/shopback.svg" :alt="item.name"> -->
+            <img v-lazyload="'http://m.021olmyy.com' + item.logo" src="../assets/shopback.svg" :alt="item.name">
             <h3>{{ item.name }}</h3>
             <p>狂欢价 <span>¥{{ item.ymoney }}</span></p>
             <s>专柜价: ¥{{ item.money }}</s>
